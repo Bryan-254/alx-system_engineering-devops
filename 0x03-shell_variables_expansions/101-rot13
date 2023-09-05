@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "encoding" | tr 'a-zA-Z' 'n-za-mN-ZA-M' | "decoding" | tr  a-zA-Z' 'n-za-mN-ZA-M'
