@@ -9,5 +9,5 @@
 # loop to take its input from the /etc/passwd file. The < symbol is used for
 # input redirection in Bash.
 while IFS=: read -r user _ _ uid _ _ home _; do
-  echo "Username: $user, UID: $uid, Home directory: $home"
+  echo "$user, $uid, $home"
 done < /etc/passwd
