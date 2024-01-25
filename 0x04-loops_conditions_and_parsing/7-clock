@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# This script is displaying "bad luck", "good luck" & "Best School"
+# This script is displaying the time for 12 hours and 59 minutes
 
 # Counter to keep track of iterations
 hour=0
 
-# You should use [ $hour -lt 12 ] since you want to display
-# hours from 0 to 11 (12 hours in total).
+# You should use [ $hour -le 12 ] since you want to display
+# hours from 0 to 12.
 # Inside the loop, the minutes are echoed (printed to the console)
 # from 1 to 59, and the value of $minute is incremented in each iteration
 while [ $hour -le 12 ];
