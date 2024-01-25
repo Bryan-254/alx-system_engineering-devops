@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times except for 9th iteration
+
+# Counter to keep track of iterations
+count=1
+
+# while [ $count -le 10 ]: This is the beginning of a while loop. It checks
+# whether the value of the variable count is less than or equal to 10.
+# The 9th iteration is special because it enters the if block and
+# prints both "Best School" and "Hi."
+# fi: Marks the end of the if statement.
+# ((count++)): Increments the value of count by 1.
+while [ $count -le 10 ]
+do
+   if [ $count -eq 9 ]
+   then
+       echo "Best School"
+       echo "Hi"
+   else
+       echo "Best School"
+   fi
+
+   ((count++))
+done
