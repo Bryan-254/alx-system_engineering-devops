@@ -8,13 +8,11 @@ hour=0
 # hours from 0 to 11 (12 hours in total).
 # Inside the loop, the minutes are echoed (printed to the console)
 # from 1 to 59, and the value of $minute is incremented in each iteration.
-while [ $hour -lt 12 ];
-do
+while [ $hour -lt 12 ]; do
     echo "Hour: $hour"
-    
+
     minute=1
-    while [ $minute -le 59 ];
-    do
+    while [ $minute -le 59 ]; do
         echo "$minute"
         ((minute++))
     done
