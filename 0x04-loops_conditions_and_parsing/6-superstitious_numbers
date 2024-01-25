@@ -1,26 +1,34 @@
 #!/usr/bin/env bash
-# This script is displaying numbers from 1 to 20
+# Bash script that displays numbers from 1 to 20 with superstitious numbers
 
 # Counter to keep track of iterations
 count=1
 
-while [ $count -le 20 ]
+# In a case statement, you have case, followed by multiple patterns,
+# each ending with ;;
+# Then you have a block of code to execute for each pattern.
+# The *) is a wildcard pattern that matches anything not matched by
+# the previous patterns.
+# esac is the keyword used to end a case statement in Bash.
+while [ $count -le 20 ];
 do
-   if [ $count -eq 4 ]
-   then
-       echo "4"
-       echo "bad luck from China"
-   elif [ $count -eq 9 ]
-   then
-       echo "9"
-       echo "bad luck from Japan"
-   elif [ $count -eq 17 ]
-   then
-       echo "17"
-       echo "bad luck from Italy"
-   else
-       echo $count
-   fi
+   case $count in
+      4)
+         echo $count
+         echo "bad luck from China"
+         ;;
+      9)
+         echo $count
+         echo "bad luck from Japan"
+         ;;
+      17)
+         echo $count
+         echo "bad luck from Italy"
+         ;;
+      *)
+         echo $count
+         ;;
+   esac
 
    ((count++))
 done
