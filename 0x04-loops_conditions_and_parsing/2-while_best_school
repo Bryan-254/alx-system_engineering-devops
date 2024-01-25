@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Counter to keep track of iterations
+
+counter=0
+
+# While loop to display "Best School" 10 times
+# $counter -lt 10 in the while loop ensures that the loop continues
+# as long as the value of $counter is less than 10
+while [ $counter -lt 10 ]
+do
+    echo "Best School"
+    ((counter++))
+done
