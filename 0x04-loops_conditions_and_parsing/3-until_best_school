@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 # Counter to keep track of iterations
+
 count=0
 
 # $count -eq 10 is a test condition in Bash scripting.
-# -eq: This is a comparison operator that stands for "equals" in Bash.
-# $count -eq 10 checks if value stored in the variable $count is equal to 10.
 # The script keeps executing the code inside the do...done block until the
 # value of $count is equal to 10.
 until [ $count -eq 10 ]
