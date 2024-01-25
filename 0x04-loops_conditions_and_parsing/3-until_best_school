@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
 # Counter to keep track of iterations
-
 count=0
 
 # $count -eq 10 is a test condition in Bash scripting.
