@@ -5,11 +5,9 @@
 # and the read command with the IFS (Internal Field Separator) set to ':' to
 # extract the desired fields (username, user id, and home directory). It then
 # prints the required information in the specified format.
-
 # < /etc/passwd: This part is the file input redirection. It tells the while
 # loop to take its input from the /etc/passwd file. The < symbol is used for
 # input redirection in Bash.
-
 while IFS=':' read -r username x userid groupid home shell; do
     echo "$username:$userid:$home"
 done < /etc/passwd
