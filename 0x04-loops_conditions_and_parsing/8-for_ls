@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # Bash script that displays content of current directory in a list format
 
-# Counter to keep track of iterations
-count=1
-
 # Skip hidden files.
 # Extract part of the name after the first dash.
 # Print the extracted part of the name.
