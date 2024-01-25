@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script is displaying "bad luck", "good luck" & "Best School"
+
+# Counter to keep track of iterations
+count=1
+
+# while [ $count -le 10 ]: This is the beginning of a while loop. It checks
+# whether the value of the variable count is less than or equal to 10.
+while [ $count -le 10 ]
+do
+   if [ $count -eq 4 ]
+   then
+       echo "bad luck"
+   elif [ $count -eq 8 ]
+   then
+       echo "good luck"
+   else
+       echo "Best School"
+   fi
+
+   ((count++))
+done
