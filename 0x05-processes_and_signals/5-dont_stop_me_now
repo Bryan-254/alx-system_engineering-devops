@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-# Bash script that stops 4-to_infinity_and_beyond process using kill
+# Terminate program to infinity and beyond using kill
 
-# Check if the process is running and terminate it forcefully
-pkill -9 -f "4-to_infinity_and_beyond" && echo "Process forcefully terminated" || echo "Process is not running"
+# Find the process ID (PID) of the program
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+if [ -n "$pid" ]; then
+  # If the PID is not empty, kill the process using SIGTERM
+  kill "$pid"
+  echo "Terminated program with PID $pid"
+fi
