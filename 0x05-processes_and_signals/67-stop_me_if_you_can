@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Bash script that stop 4-to_infinity_and_beyond process w/out kill or killall
+# Bash script that stop 4-to_infinity_and_beyond process w/out kill or killall.
 
 # pkill provides a convenient way to terminate or signal multiple processes
 # that match a specified pattern.
 
 # -f: Match against the entire command line, not just the process name.
 # This will send a signal to all processes whose entire command line matches
-# the specified pattern, effectively stopping them.
+# the specified pattern, effectively stopping them
 
 pkill -f 4-to_infinity_and_beyond
