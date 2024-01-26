@@ -1,16 +1,13 @@
 #!/usr/bin/env bash
-# Bash script that displays the PID along with the process name.
+# Bash script that displays the PID along with the process name,
+# of processes whose name contain the word bash.
 
-# Get the PID of the script
-script_pid=$$
+# pgrep is used to search for and list the process IDs (PIDs) of
+# processes based on certain criteria.
 
-# Use pgrep to find PIDs of processes containing the word 'bash'
-bash_pids=$(pgrep -u $(whoami) -f bash)
+# Bash script that uses the pgrep command to find processes
+# containing the word "bash"
 
-# Iterate through the obtained PIDs and display process name and PID
-for pid in $bash_pids; do
-    # Skip the script's own PID
-    if [ "$pid" -ne "$script_pid" ]; then
-        echo "$pid bash"
-    fi
-done
+# This script uses the "-l" option to display the process ID (PID) along
+# with the process name.
+pgrep -l bash
