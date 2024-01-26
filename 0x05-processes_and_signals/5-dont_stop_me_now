@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Terminate program to infinity and beyond using kill
 
-# Find the process ID (PID) of the program
+# Find the process ID (PID) of the program.
 pid=$(pgrep -f "4-to_infinity_and_beyond")
 
 if [ -n "$pid" ]; then
   # If the PID is not empty, kill the process using SIGTERM
   kill "$pid"
-  echo "Terminated program with PID $pid"
+  echo "Terminated"
 fi
