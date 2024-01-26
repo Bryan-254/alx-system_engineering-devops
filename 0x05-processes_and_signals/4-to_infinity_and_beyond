@@ -2,7 +2,8 @@
 # Bash script that displays To infinity and beyond indefinitely.
 
 # The entire script is essentially a loop that continuously prints.
-# the specified message and pauses for 2 seconds between each iteration. # It will keep running until manually terminated by the user.
+# the specified message and pauses for 2 seconds between each iteration.
+# It will keep running until manually terminated by the user.
 while true
 do
   echo "To infinity and beyond"
