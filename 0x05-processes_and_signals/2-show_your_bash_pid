@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Bash script that displays lines containing the bash word.
+# shellcheck disable=SC2009
+
+# The # shellcheck disable=SC2009 comment is added to ignore a
+# specific ShellCheck warning related to the use of ps and grep together.
+
+# This is a Bash script to display lines containing the word "bash"
+# and find the PID of the Bash process.
+
+# The "aux" options are used to display a detailed list of information about
+# all processes running on the system.
+
+# a: Shows processes from all users, not just the current user.
+# u: Displays detailed information about each process, including the user
+# who owns the process.
+# x: Includes processes not attached to a terminal. This is particularly
+# useful for showing background processes.
+
+# "grep" is widely used for text searching and pattern matching in
+# unix environments.
+# Use "ps" command to display processes and filter lines containing "bash"
+ps aux | grep bash
