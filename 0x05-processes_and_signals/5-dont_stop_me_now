@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Bash script that stops 4-to_infinity_and_beyond process using kill
 
-# Check if the process is running and terminate it
-pkill -f "4-to_infinity_and_beyond" && echo "Terminated" 
+# Check if the process is running and terminate it forcefully
+pkill -9 -f "4-to_infinity_and_beyond" && echo "Process forcefully terminated" || echo "Process is not running"
