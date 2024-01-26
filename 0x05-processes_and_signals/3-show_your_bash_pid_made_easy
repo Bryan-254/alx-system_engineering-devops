@@ -5,7 +5,7 @@
 script_pid=$$
 
 # Use pgrep to find PIDs of processes containing the word 'bash'
-bash_pids=$(pgrep -f bash)
+bash_pids=$(pgrep -u $(whoami) -f bash)
 
 # Iterate through the obtained PIDs and display process name and PID
 for pid in $bash_pids; do
