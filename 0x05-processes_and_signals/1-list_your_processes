@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Bash script that displays a list of currently running processes.
+
+# Display a list of currently running processes in a user-oriented format
+# with process hierarchy.
+
+# The 'ps' command with 'aux' options displays all running processes
+# in a user-oriented format. The '--forest' option shows process hierarchy.
+
+ps aux --forest
