@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Bash script that displays the PID, along with the process name
+# Bash script that displays the PID along with the process name.
 
 # Get the PID of the script
 script_pid=$$
@@ -11,7 +11,6 @@ bash_pids=$(pgrep -u $(whoami) -f bash)
 for pid in $bash_pids; do
     # Skip the script's own PID
     if [ "$pid" -ne "$script_pid" ]; then
-        process_name=$(ps -o comm= -p $pid)
-        echo "$pid $process_name"
+        echo "$pid bash"
     fi
 done
