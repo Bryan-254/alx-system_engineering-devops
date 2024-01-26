@@ -6,6 +6,6 @@
 
 # -f: Match against the entire command line, not just the process name.
 # This will send a signal to all processes whose entire command line matches
-# the specified pattern, effectively stopping them
+# the specified pattern, effectively stopping them.
 
 pkill -f 4-to_infinity_and_beyond
