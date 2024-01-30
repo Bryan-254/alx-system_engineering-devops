@@ -16,5 +16,5 @@ input_string = ARGV[0]
 if input_string.match?(school_regex)
   puts "School"
 else
-  puts "Not a School"
+  puts "$"
 end
