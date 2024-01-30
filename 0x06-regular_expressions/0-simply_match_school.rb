@@ -22,4 +22,9 @@ else
   puts "$"
 end
 
+# Print out each occurrence of the word "School"
+matches.each do |match|
+  print match, "$"
+end
+
 puts
