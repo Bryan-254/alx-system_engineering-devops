@@ -16,15 +16,12 @@ input_string = ARGV[0]
 matches = input_string.scan(school_regex)
 
 # Print out each occurrence of the word "School"
-if input_string.match?(school_regex)
-  puts "School"
-else
+if matches.empty?
   puts "$"
-end
-
-# Print out each occurrence of the word "School"
-matches.each do |match|
-  print match, "$"
+else
+  matches.each do |match|
+    print match, "$"
+  end
 end
 
 puts
