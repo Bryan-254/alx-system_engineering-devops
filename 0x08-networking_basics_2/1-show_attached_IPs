@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Script that displays all active IPv4 IPs on the machine.
+
+# ifconfig: This command is used to display information about
+# network interfaces on Unix-like systems.
+
+# grep "inet addr:": The grep command is used to search for lines in the
+# output of ifconfig that contain the string "inet addr:". This filters out
+# lines that do not contain IPv4 address information.
+
+# cut -d ':' -f 2-: The cut command is used to extract specific
+# portions of each line.
+
+# cut -d ' ' -f 1: After the first cut command, there might be leading spaces
+# before the IP address. This command uses space as a delimiter (-d ' ') and
+# extracts the first field (-f 1), effectively removing any leading spaces.
+ifconfig | grep "inet addr:" | cut -d ':' -f 2- | cut -d ' ' -f 1
