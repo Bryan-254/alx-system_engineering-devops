@@ -9,11 +9,6 @@ cp /etc/hosts ~/hosts.new
 sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
 sed -i '2i8.8.8.8 facebook.com' ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
-
-echo "Changes applied. Check the results:"
-ping localhost
-ping facebook.com
-
 # Uncomment the following lines to revert changes
 #cp -f /etc/hosts.backup /etc/hosts
 #echo "Changes reverted. Check the results:"
