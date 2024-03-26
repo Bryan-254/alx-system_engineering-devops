@@ -1,16 +1,18 @@
-# using Puppet to make changes to our configuration file
-file_line { 'Turn off passwd auth':
-  path => '/etc/ssh/sshd_config',
-  line => 'PasswordAuthentication no',
-}
 
-file_line { 'Declare identity file':
-  path => '/etc/ssh/ssh_config',
-  line => 'IdentityFile ~/.ssh/school',
-}
-
-service { 'ssh':
-  ensure    => running,
-  enable    => true,
-  subscribe => File_line['Turn off passwd auth'] -> File_line['Declare identity file'],
+  
+#make changes to our configuration file
+file { '/etc/ssh/ssh_config':
+  ensure => present
+}->
+file_line { 'pass no':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'PasswordAuthentication no',
+  match  => '^PasswordAuthentication yes',
+}->
+file_line { 'IdentityFile':
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'IdentityFile ~/.ssh/holberton',
+  match  => '^IdentityFile',
 }
