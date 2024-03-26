@@ -1,18 +1,18 @@
+# using Puppet to make changes to our configuration file
+include stdlib
 
-  
-#make changes to our configuration file
-file { '/etc/ssh/ssh_config':
-  ensure => present
-}->
-file_line { 'pass no':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication no',
-  match  => '^PasswordAuthentication yes',
-}->
-file_line { 'IdentityFile':
-  ensure => present,
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/holberton',
-  match  => '^IdentityFile',
+stdlib::file_line { 'Turn off passwd auth':
+  path => '/etc/ssh/sshd_config',
+  line => 'PasswordAuthentication no',
+}
+
+stdlib::file_line { 'Declare identity file':
+  path => '/etc/ssh/ssh_config',
+  line => 'IdentityFile ~/.ssh/school',
+}
+
+service { 'ssh':
+  ensure    => running,
+  enable    => true,
+  subscribe => Stdlib::File_line['Turn off passwd auth', 'Declare identity file'],
 }
